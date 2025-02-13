@@ -7,7 +7,8 @@ const cors = require('cors');  // Import CORS package
 const app = express();
 const port = 8971;
 
-app.use(cors()); 
+app.use(cors({
+    origin: 'http://localhost:5173'})); 
 
 const licenseKey = process.env.YOUR_LICENSE_KEY;
 PDFNet.initialize(licenseKey);
